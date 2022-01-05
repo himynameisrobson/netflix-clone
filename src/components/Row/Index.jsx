@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from '../../services/axios';
+import { Wrapper, Title, MovieRow, Poster } from './styles';
+
 
 const IMG_URL = 'https://image.tmdb.org/t/p/w300';
 
@@ -18,16 +20,16 @@ function Row({ title, fetchUrl }) {
 
 
     return (
-        <div>
-            <h2>{title}</h2>
+        <Wrapper>
+            <Title>{title}</Title>
             
-            <div>
+            <MovieRow>
                 {movies.map(movie => (
-                    <img src={`${IMG_URL}${movie.poster_path}`} alt={movie.name} />
+                    <Poster key={movie.id} src={`${IMG_URL}${movie.poster_path}`} alt={movie.name} />
                 ))}
-            </div>
+            </MovieRow>
 
-        </div>
+        </Wrapper>
     )
 }
 
