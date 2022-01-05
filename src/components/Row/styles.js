@@ -16,7 +16,10 @@ export const Wrapper = styled.div`
 
 export const Title = styled.h2`
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 500;
+    font-family: 'Roboto', 'sans-serif';
+    margin-bottom: 5px;
+
 `;
 
 export const MovieRow = styled.div`
@@ -31,7 +34,7 @@ export const Poster = styled.img`
     width: 100%;
     max-height: 180px;
     margin-right: 10px;
-    transition: transform 450ms;
+    transition: transform 350ms;
     cursor: pointer;
 
     &:hover {

@@ -1,14 +1,16 @@
 import './App.css'
 import Row from './components/Row'
+import Main from './components/Main'
 import requests from './services/requests'
 
 function App() {
 
   return (
     <div className="App">
-      <h1>Netflix Clone</h1>
-      <Row title='Trending Now' fetchUrl={requests.fetchTrending} />
+      {/* <Header /> */}
+      <Main />
       <Row title='Netflix Originals' fetchUrl={requests.fetchNetflixOriginals} />
+      <Row title='Trending Now' fetchUrl={requests.fetchTrending} />
       <Row title='Top Rated' fetchUrl={requests.fetchTopRated} />
       <Row title='Action' fetchUrl={requests.fetchActionMovies} />
       <Row title='Comedy' fetchUrl={requests.fetchComedyMovies} />
