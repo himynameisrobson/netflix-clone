@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from '../../services/axios';
 import requests from '../../services/requests';
-import { InfoWrapper, MainWrapper, MovieTitle, ButtonWrapper, Button, Description } from './styles';
+import { InfoWrapper, MainWrapper, MovieTitle, ButtonWrapper, Button, Description, FadeBottom } from './styles';
 
 
 function Main() {
@@ -42,7 +42,9 @@ function Main() {
                 </ButtonWrapper>
                 <Description>{movie?.overview}</Description>
             </InfoWrapper>
+            <FadeBottom />
         </MainWrapper>
+
     )
 }
 

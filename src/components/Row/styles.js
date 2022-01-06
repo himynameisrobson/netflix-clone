@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
     overflow-y: hidden;
     overflow-x: scroll;
     padding: 20px;
+    background-color: #111;
 
     &::-webkit-scrollbar {
         display: none;
@@ -18,7 +19,12 @@ export const Title = styled.h2`
     font-size: 2rem;
     font-weight: 500;
     font-family: 'Roboto', 'sans-serif';
-    margin-bottom: 5px;
+    color: #d9d9d9;
+    margin-bottom: 10px;
+
+    @media (max-width: 375px) {
+        font-size: 1.5rem;
+    }
 
 `;
 
@@ -39,5 +45,12 @@ export const Poster = styled.img`
 
     &:hover {
         transform: scale(1.08)
+    }
+
+    @media (max-width: 375px) {
+    object-fit: contain;
+    width: 100%;
+    max-height: 150px;
+    margin-right: 8px;
     }
 `;

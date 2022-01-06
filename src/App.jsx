@@ -1,13 +1,14 @@
-import './App.css'
-import Row from './components/Row'
-import Main from './components/Main'
-import requests from './services/requests'
+import './App.css';
+import Row from './components/Row';
+import Header from './components/Header';
+import Main from './components/Main';
+import requests from './services/requests';
 
 function App() {
 
   return (
     <div className="App">
-      {/* <Header /> */}
+      <Header />
       <Main />
       <Row title='Netflix Originals' fetchUrl={requests.fetchNetflixOriginals} />
       <Row title='Trending Now' fetchUrl={requests.fetchTrending} />
